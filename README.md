@@ -1,25 +1,47 @@
-# Laravel Minimal App
+# Laravel Task App
 
-Laravelで構築した最小構成のアプリです。
+Laravelで作成した、シンプルなタスク管理アプリです。  
+タスクの登録・編集・削除機能を備えており、今後はカテゴリや完了フラグ機能の追加も予定しています。
 
-## 内容
+---
 
-- Laravel Sail で環境構築
-- Hello表示用のBladeテンプレート
-- postsテーブルのマイグレーション・Seeder
-- 投稿一覧ページの表示
+## 🔧 使用技術
 
-## 使用技術
-
+- PHP 8.x
 - Laravel 10.x
-- PHP 8.2
-- Laravel Sail（Docker）
-- MySQL
+- MySQL（Docker）
+- Laravel Sail（ローカル開発環境）
+- Bootstrap（UIスタイル）
 
-## セットアップ方法
+---
+
+## 📷 スクリーンショット
+
+### タスク一覧画面
+
+![task-list](https://github.com/rahako/laravel-task-app/assets/xxxxxxxx/task-list.png)
+
+### タスク追加画面
+
+![task-create](https://github.com/rahako/laravel-task-app/assets/xxxxxxxx/task-create.png)
+
+※キャプチャは `assets` にアップロードしてURLに差し替えてください。
+
+---
+
+## ⚙️ 主な機能
+
+- タスクの一覧表示
+- 新規タスクの作成
+- タスクの編集／削除
+
+---
+
+## 🚀 セットアップ手順（Docker + Laravel Sail）
 
 ```bash
-git clone https://github.com/ユーザー名/laravel-min-app.git
-cd laravel-min-app
+git clone https://github.com/rahako/laravel-task-app.git
+cd laravel-task-app
+cp .env.example .env
 ./vendor/bin/sail up -d
-./vendor/bin/sail artisan migrate --seed
+./vendor/bin/sail artisan migrate
